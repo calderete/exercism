@@ -1,16 +1,10 @@
 class HelloWorld
-
-
 	def self.hello(*name)
-
 		if name == []
-	  	"Hello, World!"
-		else
-			name  = name.map do |n| 
-				n.to_s
-		 		return "Hello, #{n}!"
-		 end
+			name = "World"
+		else name = name[0]
 		end
+		
+		return "Hello, #{name}!"
 	end
-
 end
