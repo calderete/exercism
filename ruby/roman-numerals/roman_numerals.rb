@@ -1,12 +1,12 @@
 require 'pry'
 
 module BookKeeping
-	VERSION = 2
+  VERSION = 2
 end
 
 public
 def to_roman
-	digits = self.to_s.chars
+  digits = self.to_s.chars
   ones = numeral_consructor(digits[-1].to_i, 'I', 'V', 'X')
   tens = numeral_consructor(digits[-2].to_i, 'X', 'L', 'C')
   hundo = numeral_consructor(digits[-3].to_i, 'C', 'D', 'M')
