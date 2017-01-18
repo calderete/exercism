@@ -19,16 +19,16 @@ def roman_digit(digit, small_char, drop_amt, insert_at, big_char)
 end
 
 def numeral_consructor(digit, small_char, big_char = 0, extra_char = 0)
-	if digit < 4
-	    return Array.new(digit, small_char).reduce(:+)
-	elsif digit == 5
-		return big_char
+  if digit < 4
+    return Array.new(digit, small_char).reduce(:+)
+  elsif digit == 5
+    return big_char
   elsif digit > 4 && digit < 9 
-  	roman_digit(digit, small_char, 5, 0, big_char)
+    roman_digit(digit, small_char, 5, 0, big_char)
   elsif digit == 4
     roman_digit(digit, small_char, 3, -1, big_char) 
   else digit > 8
-  	roman_digit(digit, small_char, 8, -1, extra_char)
+    roman_digit(digit, small_char, 8, -1, extra_char)
   end
 end
 
