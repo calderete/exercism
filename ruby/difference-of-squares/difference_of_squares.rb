@@ -9,20 +9,17 @@ class Squares
   end
 
   def square_of_sum
-  	@square = @number_list.reduce(:+)**2
-    return @square
+  	square = @number_list.reduce(:+)**2
+    square
   end
 
   def sum_of_squares
-  	@sum = @number_list.map { |n| n**2 }.reduce(:+)
-  	return @sum
+  	sum = @number_list.map { |n| n**2 }.reduce(:+)
+  	sum
   end
 
   def difference
-  	square_of_sum
-  	sum_of_squares
-  	result = @square - @sum
-  	return result
+  	square_of_sum - sum_of_squares
   end
 
 end
